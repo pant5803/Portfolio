@@ -71,7 +71,7 @@ const EmailSection = () => {
                 repeatType: "reverse",
               }}
             >
-              +91-9839023884
+              <a href="tel:+919839023884">+91-9839023884</a>
             </motion.span>
           </motion.div>
 
@@ -109,7 +109,9 @@ const EmailSection = () => {
                 repeatType: "reverse",
               }}
             >
-              toshitpant0808@gmail.com
+              <a href="mailto:toshitpant0808@gmail.com">
+                toshitpant0808@gmail.com
+              </a>
             </motion.span>
           </motion.div>
         </div>
