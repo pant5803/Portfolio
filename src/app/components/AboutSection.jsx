@@ -2,6 +2,7 @@
 import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
+import { FaAward, FaGraduationCap, FaShieldAlt } from "react-icons/fa";
 
 const TAB_DATA = [
   {
@@ -43,8 +44,14 @@ const TAB_DATA = [
     id: "certifications",
     content: (
       <ul className="list-disc pl-2">
-        <li>Ranked among the top 5% in the NPTEL Ethical Hacking course and was awarded a Silver Medal.</li>
-        <li>Earned C++ Programming certification from Udemy, showcasing proficiency in object-oriented development.</li>
+        <li>
+          Ranked among the top 5% in the NPTEL Ethical Hacking course and was
+          awarded a Silver Medal.
+        </li>
+        <li>
+          Earned C++ Programming certification from Udemy, showcasing
+          proficiency in object-oriented development.
+        </li>
       </ul>
     ),
   },
@@ -69,10 +76,14 @@ const AboutSection = () => {
           <p className="text-base lg:text-lg">
             I am a full stack web developer with a passion for creating
             interactive and responsive web applications. I have experience
-            working with JavaScript, React, Redux, Node.js, Express, PostgreSQL,
-            Sequelize, HTML, CSS, and Git. I am a quick learner and I am always
-            looking to expand my knowledge and skill set. I am a team player and
-            I am excited to work with others to create amazing applications.
+            working with{" "}
+            <span className="text-base lg:text-lg font-bold italic font-[Poppins]">
+              JavaScript, React, Redux, Node.js, Express, PostgreSQL, Sequelize,
+              HTML, CSS, and Git
+            </span>
+            . I am a quick learner and I am always looking to expand my
+            knowledge and skill set. I am a team player and I am excited to work
+            with others to create amazing applications.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
@@ -80,6 +91,7 @@ const AboutSection = () => {
               active={tab === "skills"}
             >
               {" "}
+              <FaShieldAlt color="#FF6666" size={20} />
               Skills{" "}
             </TabButton>
             <TabButton
@@ -87,14 +99,18 @@ const AboutSection = () => {
               active={tab === "education"}
             >
               {" "}
-              Education{" "}
+              <FaGraduationCap color="blue" size={30} />
+              Education
+              {"  "}
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("certifications")}
               active={tab === "certifications"}
             >
               {" "}
-              Certifications{" "}
+              <FaAward color="gold" size={25} />
+              Certifications
+              {"  "}
             </TabButton>
           </div>
           <div className="mt-8">

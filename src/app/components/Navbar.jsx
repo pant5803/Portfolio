@@ -4,9 +4,6 @@ import React, { useState } from "react";
 import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
-import { FaCode } from "react-icons/fa";
-import { AiFillCode } from "react-icons/ai";
-import { GiTechnoHeart } from "react-icons/gi";
 
 const navLinks = [
   {

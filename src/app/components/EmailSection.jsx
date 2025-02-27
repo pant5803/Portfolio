@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
@@ -35,14 +36,82 @@ const EmailSection = () => {
       <div>
         <h1 className="text-4xl font-bold mb-8">Contact Me</h1>
 
-        <div className="flex items-center space-x-4 mb-6">
-          <FaPhoneAlt className="text-blue-500 text-6xl" />
-          <span className="text-2xl">+91-9839023884</span>
-        </div>
+        <div>
+          {/* Phone Number */}
+          <motion.div
+            className="flex items-center space-x-4 mb-6"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "backOut" }} // Bounce effect
+          >
+            <motion.div
+              className="text-blue-500 text-6xl"
+              animate={{
+                scale: [1, 1.2, 1],
+                textShadow: [
+                  "0px 0px 0px #3b82f6",
+                  "0px 0px 10px #3b82f6",
+                  "0px 0px 0px #3b82f6",
+                ],
+              }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                repeatType: "reverse",
+              }}
+            >
+              <FaPhoneAlt />
+            </motion.div>
+            <motion.span
+              className="text-2xl"
+              animate={{ opacity: [0.6, 1, 0.6] }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                repeatType: "reverse",
+              }}
+            >
+              +91-9839023884
+            </motion.span>
+          </motion.div>
 
-        <div className="flex items-center space-x-4">
-          <FaEnvelope className="text-red-500 text-6xl" />
-          <span className="text-2xl">toshitpant0808@gmail.com</span>
+          {/* Email */}
+          <motion.div
+            className="flex items-center space-x-4"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "backOut", delay: 0.3 }} // Bounce effect with delay
+          >
+            <motion.div
+              className="text-red-500 text-6xl"
+              animate={{
+                scale: [1, 1.2, 1],
+                textShadow: [
+                  "0px 0px 0px #ef4444",
+                  "0px 0px 10px #ef4444",
+                  "0px 0px 0px #ef4444",
+                ],
+              }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                repeatType: "reverse",
+              }}
+            >
+              <FaEnvelope />
+            </motion.div>
+            <motion.span
+              className="text-2xl"
+              animate={{ opacity: [0.6, 1, 0.6] }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                repeatType: "reverse",
+              }}
+            >
+              toshitpant0808@gmail.com
+            </motion.span>
+          </motion.div>
         </div>
       </div>
     </section>
